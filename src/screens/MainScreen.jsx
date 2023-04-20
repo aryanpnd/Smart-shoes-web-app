@@ -117,7 +117,7 @@ function Projects() {
     useEffect(() => {
         if (!speechpause) {
             if (projects < maxDistance && projects > minDistance) {
-                speak({ text: `The object is ${projects} centimeters away` });
+                speak({ text: `The object is ${Math.round(projects)} centimeters away` });
             } else {
                 cancel()
             }
