@@ -1,38 +1,65 @@
 .App {
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainScreen {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.componentsScreen {
+  height: 100%;
+  width: 90%;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.heading1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.distance {
+  text-align: center;
+  padding-top: 2rem;
+  height: 20%;
+}
+
+.mediaButtons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
+}
+
+.manageDistance{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 0.8rem;
+  border-radius: 18px;
+  width: 100%;
+  height: 30%;
+  background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.distanceInputs{
+  margin-top: 1rem;
+  display: flex;
 }
