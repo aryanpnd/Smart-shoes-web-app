@@ -1,65 +1,41 @@
 .App {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
-.mainScreen {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.slideAnim {
+	animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
-.componentsScreen {
-  height: 100%;
-  width: 90%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+
+.slideAnim3 {
+	animation: myAnim3 1s ease 0s 1 normal forwards;
 }
 
-.heading1 {
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 600;
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-.distance {
-  text-align: center;
-  padding-top: 2rem;
-  height: 20%;
-}
+@keyframes myAnim3 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
 
-.mediaButtons {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-.manageDistance{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.8rem;
-  border-radius: 18px;
-  width: 100%;
-  height: 30%;
-  background: rgba( 255, 255, 255, 0.05 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 6px );
--webkit-backdrop-filter: blur( 6px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-}
-
-.distanceInputs{
-  margin-top: 1rem;
-  display: flex;
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
