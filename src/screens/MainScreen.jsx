@@ -149,11 +149,11 @@ function Projects() {
         buzzer2 ? setbuzzer2(false) : setbuzzer2(true)
     }
 
-    const handleFrontSet1 = () => { return setFsMaxDistance(inputval1), writeVariableData("fs1", inputval1) }
-    const handleFrontSet2 = () => { return setfsMinDistance(inputval2), writeVariableData("fs2", inputval2) }
+    const handleFrontSet1 = () => { return (setFsMaxDistance(inputval1), writeVariableData("fs1", inputval1)) }
+    const handleFrontSet2 = () => { return (setfsMinDistance(inputval2), writeVariableData("fs2", inputval2)) }
 
-    const handleBackSet1 = () => { return setbsMaxDistance(inputval2), writeVariableData("bs1", inputval3) }
-    const handleBackSet2 = () => { return setbsMinDistance(inputval2), writeVariableData("bs2", inputval4) }
+    const handleBackSet1 = () => { return (setbsMaxDistance(inputval3), writeVariableData("bs1", inputval3)) }
+    const handleBackSet2 = () => { return (setbsMinDistance(inputval4), writeVariableData("bs2", inputval4)) }
 
 
     const writeVariableData = (val, valData) => {
@@ -181,7 +181,7 @@ function Projects() {
 
     useEffect(() => {
         if (!buzzer && frontsensor) {
-            if (projects < fsmaxDistance | projects > fsminDistance) {
+            if (projects < fsmaxDistance && projects > fsminDistance) {
                 const audio = new Audio(buzzer1);
                 audio.play();
 
